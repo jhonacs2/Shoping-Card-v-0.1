@@ -8,15 +8,16 @@
 
 body {
         width: 100%;
+        
         display: flex;
         flex-direction: row;
         background: burlywood;
-        background: url('https://www.casa-grande-hotel.com/es/public/img/restaurantes/a2.jpg') center center;
+        background: url('https://www.casa-grande-hotel.com/es/public/img/restaurantes/a2.jpg');
         background-size: cover;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         align-content: center;
         
        
@@ -36,11 +37,13 @@ body {
     align-items: center;
 /*     overflow-y: scroll; */
     align-content: center;
-   
+}
 
-    
-    
-    
+.scroll{
+  width: 100%;
+  height: 600px;
+  scroll-padding: 50px 0 0 50px;
+  overflow: scroll;
 }
 
 .card {
@@ -77,10 +80,20 @@ body {
     outline: none;
     text-align: center;
     font-weight: bold;
-    
-    
-    
 }
+
+.buttonBuy{
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background: #FF5733;
+  padding: 2px 16px;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+
 .img{
   
     width: 100%;
@@ -125,6 +138,7 @@ div.table-title {
 /*** Table Styles **/
 
 .table-fill {
+
   background: white;
   border-radius:3px;
   border-collapse: collapse;
@@ -136,6 +150,10 @@ div.table-title {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
   text-align: center;
+}
+
+.visibility {
+  display: none;
 }
  
 th {

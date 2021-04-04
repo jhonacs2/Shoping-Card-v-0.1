@@ -1,5 +1,7 @@
 const main = document.querySelector('#menu');
 const totalPrize = document.querySelector('#total-prize')
+const buttonBuy = document.querySelector('#comprar')
+console.log(buttonBuy)
 let addtotal = 0;
 const productos =[
     {
@@ -77,6 +79,8 @@ const productos =[
     
 ] 
 
+buttonBuy.addEventListener('click', getTotal);
+
 const createElementDom = () => {
     productos.forEach(function(comida,index){
         const card = document.createElement('div');
@@ -130,6 +134,15 @@ function additem(){
 
         })
     })
+}
+
+
+function getTotal() {
+    const visibility = document.querySelector('.visibility');
+    visibility.classList.remove('visibility');
+    main.style.pointerEvents = 'none';
+
+    
 }
 
 function refreshPrize(sumTotal) {
